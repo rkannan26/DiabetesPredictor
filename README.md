@@ -5,19 +5,12 @@ and usability.
 
 To use application, run app.py, with project structure:
 
-UIdirectoryfolder/
-|
-├── templates/
-│   ├── index.html
-│   ├── result.html
-│
-├── static/
-│   ├── css/
-│       ├── styles.css
-│
-├── app.py
-├── model.pkl
-└── scaler.pkl
+UIdirectoryfolder/app.py
+UIdirectoryfolder/model.pkl
+UIdirectoryfolder/scaler.pkl
+UIdirectoryfolder/templates/index.html
+UIdirectoryfolder/templates/result.html
+UIdirectoryfolder/static/css/styles.css
 
 
 Model in main.py is located outside of the UI directory folder.
