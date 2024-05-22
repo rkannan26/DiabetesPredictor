@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Diabetes Prediciton Result </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="resultpage">
+    <h1> Prediction Result </h1>
+    <em>
+        <strong>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>{{ prediction }}</p></strong>
+    </em>
+    {% if prediction == 'Not Diabetic' %}
+    <div class="notdiabetic">
+        <strong><p>Congratulations! You are not diabetic. Keep up the good work!</p></strong></div>
+    {% endif %}
+    {% if prediction == 'Diabetic' %}
+        <div class="diabetic">
+            <strong><p>It looks like you may be or are diabetic. Here are some ways to help manage the condition:</p></strong>
+            <ul>
+                <li>Monitor your blood sugar levels regularly.</li>
+                <li>Follow a balanced diet and avoid sugary foods.</li>
+                <li>Engage in regular physical activity.</li>
+                <li>Take medications as prescribed by your doctor.</li>
+                <li>Consider consulting with a diabetes educator or nutritionist.</li>
+            </ul>
+        </div>
+    {% endif %}
+    <a href="/">Try Again!</a>
+</body>
+</html>
