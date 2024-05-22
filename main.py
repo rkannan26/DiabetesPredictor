@@ -1,10 +1,6 @@
 import pandas as pd
 import numpy as np
 import joblib
-from skl2onnx import convert_sklearn
-from skl2onnx.common.data_types import FloatTensorType
-import tkinter as tk
-from tkinter import messagebox
 
 myDF = pd.read_csv("diabetes.csv")
 
