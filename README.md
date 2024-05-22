@@ -6,7 +6,7 @@ and usability.
 To use application, run app.py, with project structure:
 
 UIdirectoryfolder/
-│
+|
 ├── templates/
 │   ├── index.html
 │   ├── result.html
