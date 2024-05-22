@@ -3,7 +3,7 @@ Machine Learning model that predicts the presence of Diabetes given statistics a
 The model's accuracy is 79% currently, and HTML/CSS were used in implementing a Flask Application UI for aesthetic
 and usability.
 
-To use application, run app.py, with project structure:
+To use application, run app.py, with project structure (Model in main.py is located outside of the UI directory folder):
 
 UIdirectoryfolder/app.py
 
@@ -17,6 +17,4 @@ UIdirectoryfolder/templates/result.html
 
 UIdirectoryfolder/static/css/styles.css
 
-
-Model in main.py is located outside of the UI directory folder.
 
