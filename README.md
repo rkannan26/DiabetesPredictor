@@ -6,10 +6,15 @@ and usability.
 To use application, run app.py, with project structure:
 
 UIdirectoryfolder/app.py
+
 UIdirectoryfolder/model.pkl
+
 UIdirectoryfolder/scaler.pkl
+
 UIdirectoryfolder/templates/index.html
+
 UIdirectoryfolder/templates/result.html
+
 UIdirectoryfolder/static/css/styles.css
 
 
