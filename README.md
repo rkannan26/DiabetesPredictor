@@ -1,5 +1,7 @@
 Machine Learning model that predicts the presence of Diabetes given statistics about personal health. 
 
+Preliminary Data Analysis is performed in Analysis.py, revealing 4 plots about variable relationships. 
+
 The model's accuracy is 79% currently, and HTML/CSS were used in implementing a Flask Application UI for aesthetic
 and usability.
 
