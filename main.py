@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import joblib
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 myDF = pd.read_csv("diabetes.csv")
 
@@ -22,7 +25,7 @@ print(y.head())
 
 from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Next, I scale the data using standardization (subtracting mean and dividng stdev from every feature)
 
@@ -41,17 +44,26 @@ model.fit(X_train_scaled, y_train)
 
 #Now, I use the test data on the model and pick up some statistics such as Accuracy, Precision, F1, and Recall scores.
 
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 y_pred = model.predict(X_test_scaled)
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
 f1 = f1_score(y_test, y_pred)
 
+cm = confusion_matrix(y_test, y_pred)
+
 print("Accuracy:", accuracy)
 print("Precision:", precision)
 print("Recall:", recall)
 print("F1-score:", f1)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Not Diabetic', 'Diabetic'], yticklabels=['Not Diabetic', 'Diabetic'])
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.show()
+
 
 joblib.dump(scaler, 'scaler.pkl')
 joblib.dump(model, 'model.pkl')
@@ -67,5 +79,6 @@ def predict_diabetes(input_data):
 # Example usage
 input_data = [6, 148, 70, 20, 85, 32.1, 0.6, 25]  # Pregnancies, Glucose, Blood Pressure, Skin Thickness, Insulin, BMI,
                                                   # Diabetes Pedigree Function, Age
+# Replace with your own
 prediction = predict_diabetes(input_data)
 print("Prediction:", "Diabetic" if prediction == 1 else "Not Diabetic")
