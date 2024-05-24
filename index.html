@@ -5,30 +5,30 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1> Diabetes Prediction Form </h1>
+    <h1> Diabetes Predictor </h1>
     <form action = "/predict" method = "post">
-        <label for="pregnancies">Pregnancies:</label>
+        <label for="pregnancies">How many pregnancies have you had?</label>
         <input type="text" name="pregnancies" required><br>
 
-        <label for="glucose">Glucose:</label>
+        <label for="glucose">What is your Glucose level?</label>
         <input type="text" name="glucose" required><br>
 
-        <label for="bloodpressure">Blood Pressure:</label>
+        <label for="bloodpressure">What is your Blood Pressure?</label>
         <input type="text" name="bloodpressure" required><br>
 
-        <label for="skinthickness">Skin Thickness:</label>
+        <label for="skinthickness">What is your Skin Thickness?</label>
         <input type="text" name="skinthickness" required><br>
 
-        <label for="insulin">Insulin:</label>
+        <label for="insulin">What is you Insulin level?</label>
         <input type ="text" name = "insulin" required><br>
 
-        <label for="bmi">BMI:</label>
+        <label for="bmi">What is your BMI?</label>
         <input type ="text" name = "bmi" required><br>
 
-        <label for="dpf">Diabetes Pedigree Function:</label>
+        <label for="dpf">What is Diabetes Pedigree Function number?</label>
         <input type ="text" name = "dpf" required><br>
 
-        <label for="age">Age:</label>
+        <label for="age">How old are you?</label>
         <input type ="text" name = "age" required><br>
 
         <input type="submit" value="Predict">
