@@ -1,7 +1,7 @@
 # Diabetes Prediction Model
 
 ## Overview
-This project implements a machine learning model to predict the likelihood of diabetes in patients based on various health metrics. The model is built using logistic regression and Data Analysis is performed before and after model creation.
+This project implements a machine learning model to predict the likelihood of diabetes in patients based on various health metrics. The model is built using logistic regression on a 90/10 train-test split and Data Analysis is performed before and after model creation.
 
 ## Features
 
@@ -25,5 +25,12 @@ This project implements a machine learning model to predict the likelihood of di
 - **result.html**: Application's second page HTML implementation that reveals Diabetes Prediction.
 - **analysis.py**: Preliminary analysis on the dataset, involving violin, box, hist, and strip plots.
 
+
+## Exploratory Data Analysis
+- **Violin Plot**: Used to compare Glucose levels for Non-Diabetic and Diabetic people
+- **BoxPlot**: Compared the Diabetes Pedigree Function between both Non-Diabetic and Diabetic people
+- **Hist Plot**: Compared how pregancies affected both Diabetic and Non-Diabetic people.
+- **Strip Plot**: Comparing the Body Mass Index of Diabetic and Non-Diabetic people.
+- **Confusion Matrix**: Used to see the True Positives, True Negatives, False Positives, and False Negatives of model prediction.
 
 
